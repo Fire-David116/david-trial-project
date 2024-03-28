@@ -12,9 +12,9 @@ export default function Home() {
       <div className="ml-[80px] h-[50%]">
         <TitleDiv />
       </div>
-      <div className="bg-custom-color h-[120px] md:w-[1903px] md:h-[120px] font-InterRegular text-[20px] text-[#C86C00] flex justify-center items-center">
+      <div className="bg-custom-color h-20 md:h-24 xl:h-32 font-InterRegular text-lg md:text-2xl text-[#C86C00] flex justify-center items-center">
         Footer
-    </div>
+      </div>
     </div>
   );
 }

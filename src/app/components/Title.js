@@ -238,7 +238,7 @@ const TitleDiv = () => {
                     </div>
                 </div>
                 <div className="w-[93%] md:w-[96%] ml-[7px] col-span-2 sm:col-span-1">
-                    <a className="block col-span-2 sm:col-span-1 font-bold text-[32px] md:text-[32px] text-white font-[HankenGroteskRegular] mt-[28px] md:mt-[0px] ml-[-70px] md:ml-[0px] md:pt-8">
+                    <a className="block col-span-2 sm:col-span-1 font-bold text-[32px] md:text-[32px] text-white font-bold mt-[28px] md:mt-[0px] ml-[-70px] md:ml-[0px] md:pt-8">
                         Your Holdings
                     </a>
                     <div className="ml-[-70px] md:ml-[0px] mt-[31px] md:mt-0 border-black">

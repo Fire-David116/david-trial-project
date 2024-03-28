@@ -242,7 +242,7 @@ export default function EnhancedTable() {
                                             id={labelId}
                                             scope="row"
                                             style={{ color: 'white', padding: '3px', fontSize: '15px' }} // Adjust padding and font size
-                                            className="border-none flex items-center hover:text-[#c86c00] transition-colors duration-10000" // Apply Tailwind class to remove borders and align content vertically
+                                            className="border-none flex items-center hover:text-[#c86c00] transition-colors duration-300" // Apply Tailwind class to remove borders and align content vertically
                                         >
                                             <div
                                                 style={{ width: "30px", height: "30px" }}
