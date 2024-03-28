@@ -216,7 +216,7 @@ const TitleDiv = () => {
                     </div>
 
                 </div>
-                <div className="w-full h-full col-span-2 sm:col-span-1 relative ml-[-70px] md:ml-[0px] md:col-span-1 w-[95%]">
+                <div className="w-full h-full col-span-2 sm:col-span-1 relative ml-[-70px] md:ml-[0px] md:col-span-1 w-[92%]">
                     <div className="flex items-center justify-between mb-[32px] mt-[36px] md:mt-0 w-[123%] md:w-[100%]">
                         <h2 className="w-full inline-block font-bold capitalize text-2xl md:text-4xl text-white mt-[24px]">
                             PnL Analysis
