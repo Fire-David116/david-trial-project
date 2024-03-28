@@ -17,7 +17,7 @@ const TitleDiv = () => {
         <div class="h-[2000px] md:h-[995px] bg-black  ">
             <div className="flex grid grid-cols-2 gap-x-6 mt-10 sm:mt-16 bg-black">
                 <div class="w-full col-span-2 grid-rows-2 sm:col-span-1 relative">
-                    <div class="flex bg-custom-color rounded-[32px] w-[97%] h-[63%] md:h-[65%] ml-[-70px] mr-[8px] md:ml-0">
+                    <div class="flex bg-custom-color rounded-[32px] w-[118%] md:w-[97%] h-[63%] md:h-[65%] ml-[-70px] mr-[8px] md:ml-0">
                         <div class="w-3/4">
                             <a className="block font-bold text-[16px] md:text-[24px] text-white font-[HankenGroteskRegular] pt-4 md:pt-2 md:pt-6 pl-6 ">
                                 My Balance
