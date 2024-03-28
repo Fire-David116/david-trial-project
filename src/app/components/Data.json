@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "Pepe PEPE",
+        "calories": 1000520,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/pepe.svg"
+    },
+    {
+        "id": 2,
+        "name": "Frax FRAX",
+        "calories": 350,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/frax.svg"
+    },
+    {
+        "id": 3,
+        "name": "Ethereum ETH",
+        "calories": 2.5,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/eth.svg"
+    },
+    {
+        "id": 4,
+        "name": "Uniswap UNI",
+        "calories": 25,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/uni.svg"
+    },
+    {
+        "id": 5,
+        "name": "Chainlink Token LINK",
+        "calories": 50,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/chain.svg"
+    },
+    {
+        "id": 6,
+        "name": "Wrapped Bitcoin WBTC",
+        "calories": 0.05,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/wbtc.svg"
+    },
+    {
+        "id": 7,
+        "name": "Shiba INU SHIB",
+        "calories": 3800,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/shiba.svg"
+    },
+    {
+        "id": 8,
+        "name": "Lido DAO Token LDO",
+        "calories": 1,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/lido.svg"
+    },
+    {
+        "id": 9,
+        "name": "Maker MKR",
+        "calories": 1,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/mkr.svg"
+    },
+    {
+        "id": 10,
+        "name": "Ribbon RBN",
+        "calories": 350,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/rbn.svg"
+    },
+    {
+        "id": 11,
+        "name": "Dogecoin",
+        "calories": 565,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/pepe.svg"
+    },
+    {
+        "id": 12,
+        "name": "dogwifhat WIF",
+        "calories": 4535,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/frax.svg"
+    },
+    {
+        "id": 13,
+        "name": "Floki  FLOKI",
+        "calories": 8,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/eth.svg"
+    },
+    {
+        "id": 14,
+        "name": "Bonk  BONK",
+        "calories": 2.4,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/uni.svg"
+    },
+    {
+        "id": 15,
+        "name": "CorgiAI CORGIAI",
+        "calories": 78,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/chain.svg"
+    },
+    {
+        "id": 16,
+        "name": "MOG Coin MOG",
+        "calories": 789,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/wbtc.svg"
+    },
+    {
+        "id": 17,
+        "name": "BOOK OF MEME BOME",
+        "calories": 0.025,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/shiba.svg"
+    },
+    {
+        "id": 18,
+        "name": "Coq Inu COQ",
+        "calories": 1.5,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/lido.svg"
+    },
+    {
+        "id": 19,
+        "name": "Gekko HQ GEKKO",
+        "calories": 18,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/mkr.svg"
+    },
+    {
+        "id": 20,
+        "name": "Myro MYRO",
+        "calories": 212,
+        "fat": "$3,500",
+        "carbs": "$8,750",
+        "avatar": "/svgs/rbn.svg"
+    }
+]

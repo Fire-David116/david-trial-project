@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+.gradient-button {
+  @apply inline-block px-4 py-2 text-white font-bold rounded cursor-pointer;
+  background-image:(#FE6A1F, #FF7277);
+  border-radius: 100px;
+}
+@font-face {
+  font-family: "HankenGroteskRegular";
+  src: local(HankenGroteskRegular), url(./components/font/HankenGrotesk-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "InterRegular";
+  src: local(HankenGroteskRegular), url(./components/font/Inter-Regular.ttf) format("ttf");
+}
+.gradient-button:hover {
+  background-image: linear-gradient(180deg, #ff977b, #ffb797);
+}
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.animate-moveLeftToRight {
+  animation-duration: 20s; /* Adjust animation duration as needed */
+  animation-timing-function: ease-in-out; /* Adjust animation timing function as needed */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

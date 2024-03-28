@@ -1,0 +1,119 @@
+"use client"
+import React, { PureComponent } from 'react';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+const data = [
+    {
+        name: 'JAN',
+        uv: 200,
+        pv: 100,
+    },
+    {
+        name: 'FEB',
+        uv: 200,
+        pv: 1398,
+        amt: 2210,
+    },
+    {
+        name: 'MAR',
+        uv: 100,
+        pv: 9800,
+        amt: 2290,
+    },
+    {
+        name: 'APR',
+        uv: 300,
+        pv: 3908,
+        amt: 2000,
+    },
+    {
+        name: 'JUN',
+        uv: 700,
+        pv: 4800,
+        amt: 2181,
+    },
+    {
+        name: 'JUL',
+        uv: 500,
+        pv: 3800,
+        amt: 2500,
+    },
+    {
+        name: 'AUG',
+        uv: 500,
+        pv: 4300,
+        amt: 2100,
+    },
+    {
+        name: 'SEP',
+        uv: 400,
+        pv: 4300,
+        amt: 2100,
+    },
+    {
+        name: 'OCT',
+        uv: 800,
+        pv: 4300,
+        amt: 2100,
+    },
+    {
+        name: 'NOV',
+        uv: 900,
+        pv: 4300,
+        amt: 2100,
+    },
+    {
+        name: 'DEC',
+        uv: 900,
+        pv: 4300,
+        amt: 2100,
+    },
+    {
+        name: '',
+        uv: 900,
+        pv: 4300,
+        amt: 2100,
+    },
+];
+export default class ChartG extends PureComponent {
+    render() {
+        const CustomArea = ({ shapeProps }) => {
+            return <defs>
+                <clipPath id="clipPath">
+                    <rect {...shapeProps} />
+                </clipPath>
+            </defs>;
+        }
+        
+        return (
+            <ResponsiveContainer width="100%" height={355}>
+                <AreaChart
+                    width={500}
+                    height={400}
+                    data={data}
+                    margin={{
+                        top: 0,
+                        left: -20,
+                        bottom: 0,
+                    }}
+                >
+                    <defs>
+                        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="10%" stopColor="#FF6800" stopOpacity={1} />
+                            <stop offset="100%" stopColor="#FD97FF" stopOpacity={0.5} />
+                        </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="6 10" vertical={false} />
+                    <XAxis hide={false} height={40}  dataKey="name" />
+                    <YAxis axisLine={false} tickCount={10} tickLine={false} />
+                    <Tooltip />
+                    <Area type="linear" dataKey="uv" fill="url(#colorUv)" stroke="#colorUv" 
+                    shape={<CustomArea shapeProps={{ borderRadius: 20 }} />} // Use a custom shape to apply border radius
+                    />
+                </AreaChart>
+            </ResponsiveContainer>
+            
+        );
+        
+    }
+    
+}
