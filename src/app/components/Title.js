@@ -216,12 +216,12 @@ const TitleDiv = () => {
                     </div>
 
                 </div>
-                <div className="w-full h-full col-span-2 sm:col-span-1 relative ml-[-70px] md:ml-[0px] md:col-span-1 w-[92%]">
-                    <div className="flex items-center justify-between mb-[32px] mt-[36px] md:mt-0 w-[123%] md:w-[100%]">
-                        <h2 className="w-full inline-block font-bold capitalize text-2xl md:text-4xl text-white mt-[24px]">
+                <div className="w-full h-full col-span-2 sm:col-span-1 relative ml-[-70px] md:ml-[0px] md:col-span-1 w-[95%]">
+                    <div className="flex items-center justify-between mb-[32px] mt-[32px] md:mt-[-20px] w-[123%] md:w-[100%]">
+                        <h2 className="w-full inline-block font-bold capitalize text-2xl md:text-4xl text-white mt-[10px]">
                             PnL Analysis
                         </h2>
-                        <p className="text-base font-bold ml-[15px] text-[#4cd10d] bg-[#102407] ml-[-50px] mt-[24px] rounded-2xl px-2 py-1 whitespace-nowrap">
+                        <p className="text-base font-bold text-[#4cd10d] bg-[#102407] mt-[20px] rounded-2xl px-2 py-1 whitespace-nowrap">
                             This&nbsp;Month&nbsp;5%&nbsp;
                             <span className="inline-block bg-[#102407] w-6">
                                 <Image
@@ -233,7 +233,7 @@ const TitleDiv = () => {
                             </span>
                         </p>
                     </div>
-                    <div className="w-[123%] md:w-[100%]">
+                    <div className="w-[124%] md:w-[100%]">
                         <ChartG />
                     </div>
                 </div>
