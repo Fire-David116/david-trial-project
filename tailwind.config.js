@@ -21,17 +21,19 @@ module.exports = {
           transform: 'translateX(0px)',
         },
 
-        '80%': {
-          transform: 'translateX(calc(-105px - 100%))',
+        '70%': {
+          transform: 'translateX(calc(-65px - 100%))',
         },
-
+        '98%': {
+          transform: 'translateX(calc(-65px - 100%))',
+        },
         '100%': {
           transform: 'translateX(0px)',
         },
       },
     },
     animation: {
-      slide: 'slide 7s ease infinite',
+      slide: 'slide 8s ease infinite',
     },
 
   },

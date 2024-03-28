@@ -26,8 +26,14 @@ const data = [
         amt: 2000,
     },
     {
-        name: 'JUN',
+        name: 'MAY',
         uv: 700,
+        pv: 4800,
+        amt: 2181,
+    },
+    {
+        name: 'JUN',
+        uv: 500,
         pv: 4800,
         amt: 2181,
     },
@@ -39,13 +45,13 @@ const data = [
     },
     {
         name: 'AUG',
-        uv: 500,
+        uv: 400,
         pv: 4300,
         amt: 2100,
     },
     {
         name: 'SEP',
-        uv: 400,
+        uv: 800,
         pv: 4300,
         amt: 2100,
     },
@@ -57,7 +63,7 @@ const data = [
     },
     {
         name: 'NOV',
-        uv: 900,
+        uv: 800,
         pv: 4300,
         amt: 2100,
     },
@@ -74,6 +80,18 @@ const data = [
         amt: 2100,
     },
 ];
+const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white bg-opacity-65 p-2 border border-orange-600 rounded-[26px] shadow">
+          <p className="text-sm font-medium text-gray-900 items-center justify-center">{`${label} : ${payload[0].value}`}</p>
+          {/* Add more content or styling as needed */}
+        </div>
+      );
+    }
+  
+    return null;
+  };
 export default class ChartG extends PureComponent {
     render() {
         const CustomArea = ({ shapeProps }) => {
@@ -83,37 +101,52 @@ export default class ChartG extends PureComponent {
                 </clipPath>
             </defs>;
         }
-        
+
         return (
-            <ResponsiveContainer width="100%" height={355}>
+            <ResponsiveContainer width="100%" height={400}>
                 <AreaChart
                     width={500}
                     height={400}
                     data={data}
                     margin={{
-                        top: 0,
-                        left: -20,
-                        bottom: 0,
+                        top: 10,
+                        right: 30,
+                        left: 0,
+                        bottom: 40,
                     }}
                 >
                     <defs>
                         <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="10%" stopColor="#FF6800" stopOpacity={1} />
-                            <stop offset="100%" stopColor="#FD97FF" stopOpacity={0.5} />
+                            <stop offset="100%" stopColor="#FD97FF" stopOpacity={0.2} />
                         </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="6 10" vertical={false} />
-                    <XAxis hide={false} height={40}  dataKey="name" />
-                    <YAxis axisLine={false} tickCount={10} tickLine={false} />
-                    <Tooltip />
-                    <Area type="linear" dataKey="uv" fill="url(#colorUv)" stroke="#colorUv" 
-                    shape={<CustomArea shapeProps={{ borderRadius: 20 }} />} // Use a custom shape to apply border radius
+                    <XAxis hide={false} height={10} dataKey="name" />
+                    <YAxis
+                        axisLine={false}
+                        tickCount={10}
+                        tickLine={false}
+                        domain={[0, 'dataMax']}
+                        allowDataOverflow={true}
+                        ticks={[0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]}
+                    />
+
+      <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#C86C00', strokeWidth: 3 }} />
+                    <Area
+                      activeDot={{ stroke: '#C86C00', strokeWidth: 2, fill: '#C86C00' }}
+                        type="linear"
+                        dataKey="uv"
+                        stroke="#C86C00" // Custom stroke color
+                        fillOpacity={1} // Full opacity for the fill
+                        fill="url(#colorUv)" // Reference to the gradient defined in <defs>
+                        strokeWidth={2} // Custom stroke width
                     />
                 </AreaChart>
             </ResponsiveContainer>
-            
+
         );
-        
+
     }
-    
+
 }

@@ -11,6 +11,7 @@ import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
 import Paper from '@mui/material/Paper';
 import { useMediaQuery } from '@mui/material';
+
 import TablePagination from '@mui/material/TablePagination';
 import sort from './style/svgs/sort.svg'
 import Image from "next/image";
@@ -94,44 +95,41 @@ function EnhancedTableHead(props) {
     };
 
     return (
-        <TableHead>
-            <TableRow className="bg-[#190F01] h-8">
-                {headCells.map((headCell, index) => (
-                    (isMobile && (headCell.id === 'fat' || headCell.id === 'carbs')) ? null : (
-                        <TableCell
-                            key={headCell.id}
-                            padding={headCell.disablePadding ? 'none' : 'normal'}
-                            sortDirection={orderBy === headCell.id ? order : false}
-                            className={`border-none py-2 text-center ${index === 0 ? 'rounded-tl-[15px]' : '' // Apply border-radius to top-left
-                        } ${index === headCells.length - 1 ? 'rounded-tr-[15px]' : '' // Apply border-radius to top-right
-                        }`}
-                        >
-                            <TableSortLabel
-                                direction={orderBy === headCell.id ? order : 'asc'}
-                                onClick={createSortHandler(headCell.id)}
-                                style={{ color: 'white', fontSize:'16px' }}
-                                hideSortIcon={true}
-                                className="font-[HankenGroteskRegular] font-bold"
-                            >
-                                {headCell.label}
-                                <span className="ml-1">
-                                    {/* Render your sort icon here */}
-                                    <div style={{ width: "10px", height: "8px" }} className="mb-2">
-                                        <Image
-                                            src={sort}
-                                            alt="Sort Icon"
-                                            className="w-4 h-4"
-                                            sizes="20vw"
-                                            priority
-                                        />
-                                    </div>
-                                </span>
-                            </TableSortLabel>
-                        </TableCell>
-                    )
-                ))}
-            </TableRow>
-        </TableHead>
+<TableHead>
+  <TableRow className="bg-[#190F01] h-8">
+    {headCells.map((headCell) => (
+      (isMobile && (headCell.id === 'fat' || headCell.id === 'carbs')) ? null : (
+        <TableCell
+          key={headCell.id}
+          padding={headCell.disablePadding ? 'none' : 'normal'}
+          sortDirection={orderBy === headCell.id ? order : false}
+          className="border-none py-2 text-center" // Add the hover class here
+        >
+          <TableSortLabel
+            direction={orderBy === headCell.id ? order : 'asc'}
+            onClick={createSortHandler(headCell.id)}
+            style={{ color: 'white' }}
+            hideSortIcon={true}
+          >
+            <span className="hover:text-[#c86c00] transition-colors duration-200">{headCell.label}</span>
+            <span className="ml-1"> {/* Add appropriate margin for spacing */}
+              {/* Render your sort icon here */}
+              <div style={{ width: "10px", height: "8px" }} className="mb-2">
+                <Image
+                  src={sort}
+                  alt="Sort Icon"
+                  className="w-4 h-4 hover:"
+                  sizes="20vw"
+                  priority
+                />
+              </div>
+            </span>
+          </TableSortLabel>
+        </TableCell>
+      )
+    ))}
+  </TableRow>
+</TableHead>
     );
 }
 
@@ -244,7 +242,7 @@ export default function EnhancedTable() {
                                             id={labelId}
                                             scope="row"
                                             style={{ color: 'white', padding: '3px', fontSize: '15px' }} // Adjust padding and font size
-                                            className="border-none flex items-center" // Apply Tailwind class to remove borders and align content vertically
+                                            className="border-none flex items-center hover:text-[#c86c00] transition-colors duration-10000" // Apply Tailwind class to remove borders and align content vertically
                                         >
                                             <div
                                                 style={{ width: "30px", height: "30px" }}
@@ -256,11 +254,11 @@ export default function EnhancedTable() {
                                                     className="w-full h-full rounded-full"
                                                 />
                                             </div>
-                                            <span className="lg:inline  hover:text-[#c86c00] transition-colors duration-200" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '16px' }}>{row.name}</span> {/* Show name only on larger screens */}
+                                            <span className="lg:inline" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '15px' }}>{row.name}</span> {/* Show name only on larger screens */}
                                         </TableCell>
-                                        <TableCell align="right" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '16px' }} className="border-none text-center hidden lg:table-cell hover:text-[#c86c00] transition-colors duration-200">{row.calories}</TableCell> {/* Display calories only on larger screens */}
-                                        <TableCell align="right" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '16px' }} className="border-none text-center hidden lg:table-cell hover:text-[#c86c00] transition-colors duration-200">{row.fat}</TableCell>
-                                        <TableCell align="right" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '16px' }} className="border-none text-center hidden lg:table-cell hover:text-[#c86c00] transition-colors duration-200">{row.carbs}</TableCell>
+                                        <TableCell align="right" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '15px' }} className="border-none text-center hover:text-[#c86c00] transition-colors duration-200">{row.calories}</TableCell> {/* Display calories only on larger screens */}
+                                        <TableCell align="right" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '15px' }} className="border-none text-center hidden lg:table-cell hover:text-[#c86c00] transition-colors duration-200">{row.fat}</TableCell>
+                                        <TableCell align="right" style={{ color: rowHovered ? '#c86c00' : 'white', padding: '3px', fontSize: '15px' }} className="border-none text-center hidden lg:table-cell hover:text-[#c86c00] transition-colors duration-200">{row.carbs}</TableCell>
                                     </TableRow>
                                 );
                             })}
@@ -268,7 +266,7 @@ export default function EnhancedTable() {
                     </Table>
 
                     <TablePagination
-                        className="bg-black text-[#C86C00]"
+                        className="bg-black text-[#C86C00] mt-[-10px]"
                         rowsPerPageOptions={[]} // Hide rows per page options
                         component="div"
                         count={rows.length}

@@ -127,13 +127,15 @@ const Activity = () => {
 
                         <div className="w-7/8 flex flex-col">
 
-                            <div className="h-1/2 flex font-bold items-center text-white ml-2 text-lg">Swapped<span className="ml-[100px] md:ml-[600px] text-[12px] text-base">03/19/23</span></div>
-                            <div className="h-1/2 flex items-center text-white ml-2 text-[12px]  md:text-[16px]">20 LINK For 0.1074ETH
+                            <div className="h-1/2 flex font-bold items-center text-white ml-2 text-lg">Swapped
+                            <span className="ml-[100px] md:ml-[590px] text-[13px] text-base">03/19/23</span>
+                            </div>
+                            <div className="h-1/2 flex items-center text-white ml-2 text-[13px]  md:text-[16px]">20 LINK For 0.1074ETH
                                 <div style={{ width: "12px", height: "12px" }}>
                                     <Image
                                         src={arrowoutward}
                                         alt="Arrow"
-                                        className="w-full h-auto ml-[115px] md:ml-[550px]"
+                                        className="w-full h-auto ml-[101px] md:ml-[550px]"
                                         sizes="20vw"
                                         priority
                                     />
@@ -159,7 +161,7 @@ const Activity = () => {
                         </div>
 
                         <div className="w-7/8 flex flex-col">
-                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg ">Received<span className="ml-[100px] md:ml-[600px] text-[12px] text-base">03/19/23</span></div>
+                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg ">Received<span className="ml-[100px] md:ml-[600px] text-[13px] text-base">03/19/23</span></div>
                             <div className="h-1/2 flex items-center text-white ml-2">NFT From mutant.ens
                                 <div style={{ width: "12px", height: "12px" }}>
                                     <Image
@@ -192,7 +194,7 @@ const Activity = () => {
                         </div>
 
                         <div className="w-7/8 flex flex-col">
-                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg ">Transferred<span className="ml-[80px] md:ml-[575px] text-[12px] text-base">03/19/23</span></div>
+                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg ">Transferred<span className="ml-[80px] md:ml-[575px] text-[13px] text-base">03/19/23</span></div>
                             <div className="h-1/2 flex items-center text-white ml-2">WBTC To 0x6584...BD68
                                 <div style={{ width: "12px", height: "12px" }}>
                                     <Image
@@ -208,7 +210,7 @@ const Activity = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-[70px] flex-none rounded-lg flex-shrink-0 mr-5 hover:bg-[#190f01] ">
+                <div className="w-full h-[70px] flex-none rounded-lg flex-shrink-0 mr-5 hover:bg-[#C86C00] ">
                     <div className="flex h-[70px]">
                         <div className="w-1/8 flex-none">
                             <div
@@ -225,7 +227,7 @@ const Activity = () => {
                         </div>
 
                         <div className="w-7/8 flex flex-col">
-                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg ">Bridged<span className="ml-[115px] md:ml-[610px] text-[12px] ext-base">03/19/23</span></div>
+                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg">Bridged<span className="ml-[115px] md:ml-[610px] text-[13px] ext-base">03/19/23</span></div>
                             <div className="h-1/2 flex items-center text-white ml-2">ethereum to Polygon
                                 <div style={{ width: "12px", height: "12px" }}>
                                     <Image
@@ -258,7 +260,7 @@ const Activity = () => {
                         </div>
 
                         <div className="w-7/8 flex flex-col">
-                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg ">Swapped<span className="ml-[100px] md:ml-[595px] text-[12px] text-base">03/19/23</span></div>
+                            <div className="h-1/2 flex font-bold items-center  text-white ml-2 text-lg">Swapped<span className="ml-[100px] md:ml-[595px] text-[13px] text-base">03/19/23</span></div>
                             <div className="h-1/2 flex items-center text-white ml-2">1ETH For 3,500 USDC
                                 <div style={{ width: "12px", height: "12px" }}>
                                     <Image
@@ -273,7 +275,7 @@ const Activity = () => {
                         </div>
 
                     </div>
-                    <div className="flex flex-col items-center justify-center mt-10">
+                    <div className="flex flex-col items-center justify-center mt-[20px]">
                         <TablePagination
                             className="bg-black text-[#C86C00]"
                             rowsPerPageOptions={[]} // Hide rows per page options
